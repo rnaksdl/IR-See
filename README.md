@@ -5,7 +5,7 @@
 IR-See analyzes infrared LED trajectories from VR controller recordings to infer PIN inputs on virtual keypads.
 
 ## Requirements
-
+- the commands below are for linux systems
 - Python 3.8+
 - OpenCV, NumPy, Pandas, scikit-learn, SciPy, Matplotlib
 - BeautifulSoup4, hmmlearn
