@@ -21,7 +21,7 @@ pip install opencv-python numpy pandas scikit-learn scipy matplotlib beautifulso
 cd scripts
 
 # 0. Generate PIN trajectory lookup tables
-python generate_pin_trajectories.py
+python 000_generate_pin_trajectories.py
 
 # 1. Record IR video (only for Raspberry Pi)
 python 100_record.py
