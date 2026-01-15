@@ -88,8 +88,8 @@ def generate_pin_trajectories(pin_length):
 
 if __name__ == "__main__":
     try:
-        # Generate trajectories for 4, 5, 6, 7, and 8 digit PINs
-        for length in [4, 5, 6, 7, 8]:
+        # Generate trajectories for 4, 5, and 6 digit PINs
+        for length in [4, 5, 6]:
             success = generate_pin_trajectories(length)
             if not success:
                 print(f"Failed to generate trajectories for length {length}")
