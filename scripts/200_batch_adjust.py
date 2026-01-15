@@ -1,44 +1,6 @@
 '''
-for 0_reg/4digit_100
-python 200_batch_adjust.py ../0_reg/4digit_100/input ../0_reg/4digit_100/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-for 0_reg/5digit_100
-python 200_batch_adjust.py ../0_reg/5digit_100/input ../0_reg/5digit_100/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-for 0_reg/6digit_100
-python 200_batch_adjust.py ../0_reg/6digit_100/input ../0_reg/6digit_100/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-for 1_angle/pitch_p60
-python 200_batch_adjust.py ../1_angle/pitch_p60/input ../1_angle/pitch_p60/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-for 1_angle/yaw_p45
-python 200_batch_adjust.py ../1_angle/yaw_p45/input ../1_angle/yaw_p45/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-for 2_90/pitch_p90
-python 200_batch_adjust.py ../2_90/pitch_p90/input ../1_angle/pitch_p90/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-for 2_90/yaw_p90
-python 200_batch_adjust.py ../2_90/yaw_p90/input ../1_angle/yaw_p90/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-
-
-for 0_reg/4digit_100
-python 200_batch_adjust.py ../0_reg/4digit_100/input ../0_reg/4digit_100/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-python 300_track.py -i ../0_reg/4digit_100/input_e -o ../0_reg/4digit_100/output_e
-python 400_guess.py -i ../0_reg/4digit_100/output_e -o ../0_reg/4digit_100/report_e
-python 500_simple_report.py -i ../0_reg/4digit_100/report_e
-
-for 0_reg/5digit_100
-python 200_batch_adjust.py ../0_reg/5digit_100/input ../0_reg/5digit_100/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-python 300_track.py -i ../0_reg/5digit_100/input_e -o ../0_reg/5digit_100/output_e
-python 400_guess.py -i ../0_reg/5digit_100/output_e -o ../0_reg/5digit_100/report_e --pin-length 5
-python 500_simple_report.py -i ../0_reg/5digit_100/report_e
-
-for 0_reg/6digit_100
-python 200_batch_adjust.py ../0_reg/6digit_100/input ../0_reg/6digit_100/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
-python 300_track.py -i ../0_reg/6digit_100/input_e -o ../0_reg/6digit_100/output_e
-python 400_guess.py -i ../0_reg/6digit_100/output_e -o ../0_reg/6digit_100/report_e  --pin-length 6
-python 500_simple_report.py -i ../0_reg/6digit_100/report_e
-
+for 0_reg/4digit
+python 200_batch_adjust.py ../0_reg/4digit/input ../0_reg/4digit/input_e --brightness -0.8 --saturation 3.0 --blackpoint 0.50 --temp-k 18000 --probe -v
 '''
 
 #!/usr/bin/env python3

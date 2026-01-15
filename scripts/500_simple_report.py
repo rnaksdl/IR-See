@@ -1,5 +1,5 @@
 '''
-python3 500_simple_report.py -i ../0_reg/4digit/report_e
+python 500_simple_report.py -i ../0_reg/4digit/report_e
 '''
 
 import argparse

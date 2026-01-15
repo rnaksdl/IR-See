@@ -1,5 +1,5 @@
 '''
-python 401_guess_angle.py -i ../1_angle_pitch_p60/output_e -o ../1_angle_/pitch_p60/report_e --yaw 0 0 --pitch 30 90
+python 401_guess_angle.py -i ../1_angle/pitch_p60/output_e -o ../1_angle_/pitch_p60/report_e --yaw 0 0 --pitch 30 90
 '''
 
 # ---- Robust patch for threadpoolctl on macOS/conda (before sklearn imports) ----
