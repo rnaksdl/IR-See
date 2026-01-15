@@ -327,33 +327,9 @@ def generate_repeated_digit_pins(centers, times, sizes):
 
 
 def filter_by_speed(points, speeds, frame_indices=None):
-    """
-    Filter points by speed using KMeans clustering (k=2).
-    Splits points into 'slow' and 'fast' clusters, keeping only slow points.
-    """
-    # Handle edge case: not enough points for clustering
-    if len(speeds) < 2:
-        if frame_indices is not None:
-            return points, frame_indices
-        else:
-            return points, np.arange(len(points))
-    
-    # Reshape speeds for KMeans (needs 2D array)
-    speeds_reshaped = speeds.reshape(-1, 1)
-    
-    # Apply KMeans with k=2 to split into slow/fast clusters
-    kmeans = KMeans(n_clusters=2, random_state=0, n_init=10)
-    labels = kmeans.fit_predict(speeds_reshaped)
-    
-    # Determine which cluster is "slow" (lower centroid value)
-    cluster_centers = kmeans.cluster_centers_.flatten()
-    slow_cluster = 0 if cluster_centers[0] < cluster_centers[1] else 1
-    
-    # Create mask for slow points
-    slow_mask = labels == slow_cluster
-    
+    threshold = np.percentile(speeds, 40)
+    slow_mask = speeds <= threshold
     filtered_points = points[slow_mask]
-    
     if frame_indices is not None:
         filtered_frames = frame_indices[slow_mask]
         return filtered_points, filtered_frames
@@ -584,7 +560,7 @@ tr:hover {{ background-color: #f5f5f5; }}
 </body>
 </html>
 """
-    with open(report_path, 'w') as f:
+    with open(report_path, 'w', encoding='utf-8') as f:
         f.write(html)
     return os.path.basename(report_path)
 
@@ -687,7 +663,7 @@ tr:hover { background-color: #f5f5f5; }
 </body>
 </html>
 """
-    with open(report_path, 'w', encoding='utf-8') as f:
+    with open(report_path, 'w') as f:
         f.write(html)
     print(f"Main HTML report generated at: {report_path}")
 
