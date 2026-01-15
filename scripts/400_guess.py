@@ -687,7 +687,7 @@ tr:hover { background-color: #f5f5f5; }
 </body>
 </html>
 """
-    with open(report_path, 'w') as f:
+    with open(report_path, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f"Main HTML report generated at: {report_path}")
 
