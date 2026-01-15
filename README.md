@@ -71,11 +71,13 @@ python 500_simple_report.py -i ../0_reg/6digit/report_e
 (We give some extra angles for error tolerance)
 #### for pitch_p60
 ```bash
+python 300_track.py -i ../1_angle/pitch_p60/input_e -o ../1_angle_/pitch_p60/output_e
 python 401_guess_angle.py -i ../1_angle/pitch_p60/output_e -o ../1_angle_/pitch_p60/report_e --yaw 0 0 --pitch 30 90
 python 500_simple_report.py -i ../1_angle/pitch_p60/report_e
 ```
 #### for yaw_p45
 ```bash
+python 300_track.py -i ../1_angle/yaw_p45/input_e -o ../1_angle_/yaw_p45/output_e
 python 401_guess_angle.py -i ../1_angle/yaw_p45/output_e -o ../1_angle_/yaw_p45/report_e --yaw 15 75 --pitch 0 0
 python 500_simple_report.py -i ../1_angle/yaw_p45/report_e
 ```
