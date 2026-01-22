@@ -1,10 +1,6 @@
 """
 Generate and store PIN trajectories for different PIN lengths.
 This pre-computes all possible PIN combinations to avoid recalculation.
-
-
-EDIT README:
-recording only for pi
 """
 import numpy as np
 import pickle
