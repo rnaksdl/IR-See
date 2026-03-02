@@ -10,7 +10,7 @@ IR-See analyzes infrared LED trajectories from VR controller recordings to infer
 - FFmpeg
 - OpenCV, NumPy, Pandas, scikit-learn, SciPy, Matplotlib
 - BeautifulSoup4, hmmlearn
-- (Recording only) Raspberry Pi + PiCamera2
+- (Recording only) Raspberry Pi + Raspberry Pi HQ Camera
 
 ```bash
 pip install opencv-python numpy pandas scikit-learn scipy matplotlib beautifulsoup4 hmmlearn
